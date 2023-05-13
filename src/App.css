@@ -6,7 +6,10 @@
   margin-top: 5px;
 }
 
-
+.todos-List{
+  border: 1px rgba(223, 218, 218, 0.863) solid ;
+  padding: 40px;
+}
 
 .addTask-component{
   display: flex;
@@ -25,13 +28,13 @@
 
 .addTask-btn {
   height: 30px;
-  background-color: rgb(78, 239, 70);
+  background-color: rgb(70, 185, 239);
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 10px;
   width: 100px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 5px;
   font-family: 'Varela Round', sans-serif;
 }
@@ -42,7 +45,7 @@
 }
 
 .todoItem li{
-  border: 2px solid;
+  border-bottom: 1px rgba(224, 221, 221, 0.836) solid;
   display: flex;
   height: 40px;
   align-items: center;
@@ -56,17 +59,39 @@
 
 .todoItem .delete-btn {
   height: 30px;
-  background-color: rgb(247, 1, 1);
-  color: rgb(0, 0, 0);
+  background-color: rgb(160, 147, 147);
+  color: rgb(255, 250, 250);
   border: none;
   border-radius: 10px;
   width: 100px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Varela Round', sans-serif;
 }
 
+.todoItem {
+  text-transform: uppercase;
+}
+
+.addTask-btn:hover {
+  background-color: rgb(123, 199, 235);
+}
+
+.todoItem .delete-btn:hover{
+  background-color: rgb(207, 90, 90);
+}
 
 .done {
   text-decoration: line-through;
+}
+
+
+.pending-completed-tasks{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.pending-completed-tasks span {
+  font-size: 20px;
 }
