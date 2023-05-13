@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+.title{
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+
+.addTask-component{
+  display: flex;
+  justify-content: center;
+
+}
+
+.addTask-input {
+  height: 25px;
+  margin-top: 50px;
+  text-align: center;
+  border: 2px solid;
+  font-size: 16px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.addTask-btn {
+  height: 30px;
+  background-color: rgb(78, 239, 70);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 5px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.todoList-component{
+  margin-top: 50px;
+  width: 700px;
+}
+
+.todoItem li{
+  border: 2px solid;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+
+
+.todoItem .delete-btn {
+  height: 30px;
+  background-color: rgb(247, 1, 1);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+
+.done {
+  text-decoration: line-through;
+}
