@@ -18,8 +18,8 @@ export const useForm = (initialForm = {}) => {
 
 
     return {
-        ...form,
         form,
+        ...form,
         handleChangeForm,
         handleResetForm
     }
