@@ -13,7 +13,7 @@ export const AddTask = ({ onNewTodo }) => {
         const newTodo = {
             description,
             done: false,
-            id: new Date().getTime(),
+            id: new Date().getTime()
         }
         onNewTodo(newTodo)
         handleResetForm()
