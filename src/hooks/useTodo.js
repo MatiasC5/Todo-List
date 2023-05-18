@@ -1,17 +1,22 @@
 import { useEffect, useReducer, useState } from "react"
 import { todoReducer } from "../components/todoReducer"
 
-const init = () => {
- return JSON.parse(localStorage.getItem('todos') || [])
-}
 
 
 export const useTodo = () => {
+    const init = () => {
+        return JSON.parse(localStorage.getItem('todos') || [])
+    }
 
     const [todos, dispatch] = useReducer(todoReducer, [], init)
 
     useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos))
+        try {
+            localStorage.setItem('todos', JSON.stringify(todos))
+        } catch (error) {
+            console.log(error)
+        }
+
     }, [todos])
 
 
@@ -39,7 +44,7 @@ export const useTodo = () => {
     }
 
 
- 
+
 
 
     return {
@@ -47,7 +52,7 @@ export const useTodo = () => {
         handleAddTodo,
         handleDeleteTodo,
         handleToggleTodo,
-        pendingTasks : todos.filter(todo => !todo.done).length,
-        completedTasks :  todos.filter(todo => todo.done).length
+        pendingTasks: todos.filter(todo => !todo.done).length,
+        completedTasks: todos.filter(todo => todo.done).length
     }
 }
