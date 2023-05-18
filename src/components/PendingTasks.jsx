@@ -11,6 +11,5 @@ export const PendingTask = ({ pendingTasks, completedTasks }) => {
         <span>{completedTasks}</span>
       </div>
     </div>
-
   )
 }

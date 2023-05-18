@@ -11,9 +11,9 @@ export const AddTask = ({ onNewTodo }) => {
         e.preventDefault()
         if (description.length <= 1) return
         const newTodo = {
-            "description": description,
-            "done": false,
-            "id": new Date().getTime()
+            description,
+            done: false,
+            id: new Date().getTime()
         }
         onNewTodo(newTodo)
         handleResetForm()
@@ -34,59 +34,3 @@ export const AddTask = ({ onNewTodo }) => {
         </form>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { useForm } from '../hooks/useForm'
-// import '../App.css'
-
-
-
-// export const AddTask = ({onNewTodo}) => {
-
-//     const { description , handleResetForm, handleChangeForm} = useForm({
-//         description: ''
-//     })
-
-
-//     const handleSubmit = e => {
-//         e.preventDefault()
-//         if(description.length <=1) return
-//         const newTodo = {
-//             description,
-//             id: new Date().getTime(),
-//             done: false,
-//         }
-//         onNewTodo(newTodo)
-//         handleResetForm()
-//     }
-
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <input
-//             type='text'
-//                 placeholder='Que hay que hacer?'
-//                 className='addTask-input'
-//                 name='description'
-//                 onChange={handleChangeForm}
-//                 value={description}
-//             />
-//         </form>
-//     )
-// }
