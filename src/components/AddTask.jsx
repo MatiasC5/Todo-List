@@ -1,11 +1,7 @@
-
 import { useForm } from '../hooks/useForm'
 import '../App.css'
 
-
 export const AddTask = ({ onNewTodo }) => {
-
-
 
     const { description, handleChangeForm, handleResetForm } = useForm({
         description: ''
@@ -22,8 +18,6 @@ export const AddTask = ({ onNewTodo }) => {
         onNewTodo(newTodo)
         handleResetForm()
     }
-
-
 
     return (
         <form onSubmit={handleSubmit}>

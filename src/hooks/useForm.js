@@ -11,11 +11,9 @@ export const useForm = (initialForm = {}) => {
         })
     }
 
-
     const handleResetForm = () => {
         setForm(initialForm)
     }
-
 
     return {
         form,
@@ -23,7 +21,6 @@ export const useForm = (initialForm = {}) => {
         handleChangeForm,
         handleResetForm
     }
-
 
 }
 
