@@ -5,18 +5,13 @@ import { todoReducer } from "../components/todoReducer"
 
 export const useTodo = () => {
     const init = () => {
-        return JSON.parse(localStorage.getItem('todos') || [])
+        return JSON.parse(localStorage.getItem('todos') || '[]')
     }
 
     const [todos, dispatch] = useReducer(todoReducer, [], init)
 
     useEffect(() => {
-        try {
-            localStorage.setItem('todos', JSON.stringify(todos))
-        } catch (error) {
-            console.log(error)
-        }
-
+        localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
 
 
