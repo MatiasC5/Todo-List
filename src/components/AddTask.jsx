@@ -11,9 +11,9 @@ export const AddTask = ({ onNewTodo }) => {
         e.preventDefault()
         if (description.length <= 1) return
         const newTodo = {
-            description,
-            done: false,
-            id: new Date().getTime(),
+            "description": description,
+            "done": false,
+            "id": new Date().getTime()
         }
         onNewTodo(newTodo)
         handleResetForm()
