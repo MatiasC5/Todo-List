@@ -2,7 +2,7 @@ import { TaskList } from './components/TaskList'
 import { AddTask } from './components/AddTask'
 import { useTodo } from './hooks/useTodo'
 import { PendingTask } from './components/PendingTasks'
-
+const a = 123
 export const App = () => {
   const { todos, handleAddTodo, handleDeleteTodo, handleToggleTodo, pendingTasks, completedTasks } = useTodo()
   return (
